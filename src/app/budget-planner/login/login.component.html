@@ -1,0 +1,36 @@
+<nav class="navbar_login">
+    <h1>Budget Planner</h1>
+</nav>
+<!-- login...  -->
+<div class="login_contaner">
+<form *ngIf="activeForm ==='login'" [formGroup]="loginForm" (ngSubmit)="onsubmit()">
+<label for="username">Name  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" placeholder="username" id="username"><br><br>
+<label for="password">Password  </label> 
+<input type="password" placeholder="password" id="password"> <br><br>
+<button type="submit">login</button>
+<p (click)="toggle('register')">dont have account?
+    <span class="heightlight">register </span>
+
+</p>
+
+<!-- register -->
+
+<!-- <div class="register_contaner">
+    <form *ngIf="activeForm ==='register'" [formGroup]="registerForm" (ngSubmit)="onsubmit()">
+    <label for="username">Name  </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="username" id="username"><br><br>
+    <label for="password">Password  </label> 
+    <input type="password" placeholder="password" id="password"> <br><br>
+    <button type="submit">login</button>
+    <p (click)="toggle('register')">dont have account?
+        <span class="heightlight">register </span>
+    
+    </p>
+
+
+
+
+</form>
+
+</div> -->

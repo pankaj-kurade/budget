@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    line-height: 50px;
+font-family: Arial, Helvetica, sans-serif;}
+.navbar_login{
+    height: 50px;
+    background:linear-gradient(130deg, #808080,#80ced6);
+    width: 100%;
+    border-radius: 20px;
+}
+
+.login_contaner{
+    max-height: 400px;
+    background-color: rgb(213, 225, 235);
+    border-radius: 19%;
+    margin: 100px auto 50px auto;
+    padding: 40px;
+    box-shadow: 0 0 20px black;
+    width: 30%;
+}
+login_contaner p{
+
+    color: rgb(183, 92, 92);
+}
