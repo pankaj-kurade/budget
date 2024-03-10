@@ -1,3 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #34747b;
+}
 h1{
     text-align: center;
     line-height: 50px;
@@ -12,10 +19,10 @@ font-family: Arial, Helvetica, sans-serif;}
 .login_contaner{
     max-height: 400px;
     background-color: rgb(213, 225, 235);
-    border-radius: 19%;
+    border-radius: 5%;
     margin: 100px auto 50px auto;
     padding: 40px;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px #b5cee4;
     width: 30%;
 }
 login_contaner p{
