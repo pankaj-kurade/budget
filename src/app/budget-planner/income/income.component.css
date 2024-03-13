@@ -1,0 +1,8 @@
+.navbar{
+    position: absolute;
+    left: 200px;
+    width: 67%;
+    border-radius: 20px;
+    background-color: aquamarine;
+    height: 100px;
+}

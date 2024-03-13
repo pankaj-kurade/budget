@@ -11,21 +11,24 @@ h1{
 font-family: Arial, Helvetica, sans-serif;}
 .navbar_login{
     height: 50px;
-    background:linear-gradient(130deg, #808080,#80ced6);
+    background:linear-gradient(130deg, #808080,hwb(186 50% 16%));
     width: 100%;
     border-radius: 20px;
 }
 
-.login_contaner{
+.login_container{
+    border-color: 2px solid black;
     max-height: 400px;
-    background-color: rgb(213, 225, 235);
+    background-color:#80808071;
     border-radius: 5%;
     margin: 100px auto 50px auto;
     padding: 40px;
-    box-shadow: 0 0 20px #b5cee4;
+    /* box-shadow: 0 0 20px #b5cee4; */
+    box-shadow: 0px 0px 30px rgb(160, 164, 163);
+
     width: 30%;
 }
-login_contaner p{
-
-    color: rgb(183, 92, 92);
+s
+.login_container:hover{
+    box-shadow: 0px 0px 30px rgb(189, 228, 228);
 }

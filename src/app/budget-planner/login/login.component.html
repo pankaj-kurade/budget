@@ -1,43 +1,40 @@
 <nav class="navbar_login">
   <h1>Budget Planner</h1>
 </nav>
-<!-- login...  -->
-<div class="login_contaner">
-  <form
-    *ngIf="activeForm === 'login'"
-    [formGroup]="loginForm"
-    (ngSubmit)="onsubmit()"
-  >
-    <label for="username">Name </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" placeholder="username" id="username" /><br /><br />
-    <label for="password">Password </label>
-    <input type="password" placeholder="password" id="password" /> <br /><br />
-    <button type="submit">login</button>
+
+<!-- login -->
+<div class="login_container">
+  <form *ngIf="activeForm === 'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    <label for="loginUsername">Name</label>
+    <input type="text" placeholder="Username" id="loginUsername" formControlName="username" /><br /><br />
+
+    <label for="loginPassword">Password</label>
+    <input type="password" placeholder="Password" id="loginPassword" formControlName="password" /><br /><br />
+
+    <button mat-raised-button color="accent"
+    type="submit">Login</button>
     <p (click)="toggle('register')">
-      dont have account?
-      <span class="heightlight" style="color: coral">register </span>
+      Don't have an account?
+      <span class="highlight" style="color: coral">Register</span>
     </p>
   </form>
-  <!-- register -->
 
-  <form
-    *ngIf="activeForm === 'register'"
-    [formGroup]="registerForm"
-    (ngSubmit)="onsubmit()"
-  >
-    <h2>register from</h2>
-    <label for="username">Name </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" placeholder="username" id="username" /><br /><br />
-    <label for="email">email </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <input type="text" placeholder="email" id="email" /><br /><br />
-    <label for="password">Password </label>
-    <input type="password" placeholder="password" id="password" /> <br /><br />
-    <button type="submit">login</button>
+  <!-- register -->
+  <form class="frame_login" *ngIf="activeForm === 'register'" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+    <h2>Register Form</h2>
+    <label for="registerUsername">Name</label>
+    <input type="text" placeholder="Username" id="registerUsername" formControlName="username" /><br /><br />
+
+    <label for="registerEmail">Email</label>
+    <input type="email" placeholder="Email" id="registerEmail" formControlName="email" /><br /><br />
+
+    <label for="registerPassword">Password</label>
+    <input type="password" placeholder="Password" id="registerPassword" formControlName="password" /><br /><br />
+
+    <button mat-raised-button type="submit">Register</button>
     <p (click)="toggle('login')">
-      have account?
-      <span class="heightlight" style="color: coral">login </span>
+      Have an account?
+      <span class="highlight" style="color: coral">Login</span>
     </p>
   </form>
 </div>
-
-

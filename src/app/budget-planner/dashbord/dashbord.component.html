@@ -1,0 +1,130 @@
+<app-side-nav></app-side-nav>
+
+<div class="container">
+<div class="card-container">
+    <div class="card">
+
+        <div class="card-header">
+            <span class="icon income-icon">
+                <mat-icon>attach_money</mat-icon>
+                <h2>income</h2>
+            </span>
+          
+        </div>
+        <hr>
+        <div class="income-details">
+            <div class="month">
+                <h3>last few month</h3>
+                <ul>
+                    <li *ngFor="let month of lastmonthIncome" >
+                    {{month}}
+                    </li>
+                </ul>
+            </div>
+            <div class="month">
+                <h3>current month</h3>
+                <p>{{currentMonth}}</p>
+
+            </div>
+            <button mat-flat-button type="button" (click)="onIncome()">view</button>
+        </div>
+        
+    </div>
+ 
+
+    <div class="card">
+
+        <div class="card-header">
+            <span class="icon income-icon">
+                <mat-icon>attach_money</mat-icon>
+                <h2>expance</h2>
+            </span>
+          
+        </div>
+        <hr>
+        <div class="income-details">
+            <div class="month">
+                <h3>last few month</h3>
+                <ul>
+                    <li *ngFor="let month of lastmonthExpence" >
+                    {{month}}
+                    </li>
+                </ul>
+            </div>
+            <div class="month">
+                <h3>current month</h3>
+                <p>{{currentMonth_expence}}</p>
+
+            </div>
+            <button mat-flat-button type="button" (click)="onExpance()">view</button>
+        </div>
+        
+    </div>
+
+
+
+    <div class="card" style="width: 500px;  ">
+
+        <div class="card-header">
+            <span class="icon income-icon">
+                <mat-icon>done_outline</mat-icon>
+                <h2>to do Transection</h2>
+            </span>
+          
+        </div>
+        <hr>
+        <div class="income-details">
+            <div class="month">
+                <h3>last few month</h3>
+                <ul>
+                    <li style="list-style: none;" *ngFor="let tod of todo_transection " >
+                        <mat-icon>sentiment_satisfied</mat-icon>
+                        {{tod.description}}
+                    </li>
+                </ul>
+            </div>
+            <!-- <div class="month">
+                <h3>current month</h3>
+                <p>{{currentMonth}}</p>
+
+            </div> -->
+            <button mat-flat-button type="button" (click)="onTodo()">view</button>
+        </div>
+        
+    </div>
+
+<!-- total transecton  -->
+
+<div class="card" style="width: 500px;  ">
+
+    <div class="card-header">
+        <span class="icon income-icon">
+            <mat-icon>account_balance_wallet</mat-icon>
+            <h2>total transection</h2>
+        </span>
+      
+    </div>
+    <hr>
+    <div class="income-details">
+        <div class="month">
+            <h3>current Month income</h3>
+                {{currentMonth}}
+
+                <hr>
+
+                <h3>current Momth expense</h3>
+                {{currentMonth_expence}}
+        </div>
+        <hr>               
+
+        <h1> <mat-icon>money_off</mat-icon>total saving = {{totalsaving|currency}}</h1>
+        
+    </div>
+    
+</div>
+
+</div>
+
+
+
+</div>
