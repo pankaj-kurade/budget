@@ -10,11 +10,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { IncomeComponent } from './income/income.component';
 import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     LoginComponent,SideNavComponent, DashbordComponent, IncomeComponent
   ],
-  imports: [FormsModule,
+  imports: [FormsModule,MatSlideToggleModule,MatInputModule,
     CommonModule,ReactiveFormsModule,MatSnackBarModule,
     BudgetPlannerRoutingModule,MatButtonModule,MatIconModule
   ]

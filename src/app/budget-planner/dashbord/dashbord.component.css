@@ -13,28 +13,24 @@ top: 2px;    */
   /* border: 2px solid black; */
   justify-content: flex-end;
   gap: 20px;
-  /* width: calc(10%-40px); */
   width: 70%;
-  height: 100dvh;
-  /* border: 2px solid black; */
+  height: 70dvh;
 }
 .card {
   display: flex;
-  /* justify-content: end; */
-  /* justify-items: end; */
+
   position: relative;
   background-color: rgb(186, 206, 223);
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgb(146, 189, 227);
-  /* width: calc(50% -40px); */
   width: 250px;
   height: 250px;
   /* overflow: hidden; */
-  transition: 0.11s ease;
+  transition: 0ms ease;
 }
 .card:hover {
   transform: translateY(-1px);
-  box-shadow: 0px 0px 010px #808080;
+  box-shadow: 0px 0px 020px #9a9a9a;
   width: 255px;
   height: 255px;
 }

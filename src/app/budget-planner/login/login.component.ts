@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+// import {MatInputModule} from '@angular/material/input';
+
 
 @Component({
   selector: 'app-login',
@@ -37,13 +39,17 @@ export class LoginComponent {
   }
 
   onLogin() {
-    if (this.loginForm.valid) {
-      const formData = this.loginForm.value;
+    const formData = this.loginForm.value;
+    if (this.loginForm.valid && formData.password==='Kurade' && formData.username==='Pankaj' ) {
+      this.router.navigate(['./budget-planner/dashbord']);
+      localStorage.setItem('username', formData.username);
+      localStorage.setItem('password', formData.password);
+
       console.log('Login Form Data:', formData);
-      this.router.navigate(['/budget-planner/dashbord']);
+    
     } else {
       console.log('Invalid Login Form Data:', this.loginForm.value);
-      this.snackBar.open('Invalid email or password', 'Close', {
+      this.snackBar.open('Please fill the form correctly', 'Close', {
         duration: 3000,
       });
     }

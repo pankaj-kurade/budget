@@ -23,7 +23,9 @@ onExpance() {
 throw new Error('Method not implemented.');
 }
 onIncome() {
-throw new Error('Method not implemented.');
+  this.router.navigate(['./budget-planner/income']);
+
+
 }
  todo_transection=[
   {description:'pay electricity bill'},

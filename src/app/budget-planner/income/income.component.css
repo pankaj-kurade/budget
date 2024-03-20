@@ -1,8 +1,50 @@
-.navbar{
+.maincontainer{
     position: absolute;
-    left: 200px;
     width: 67%;
+    height: 100vh;
+    left: 15%;
+    /* align-self: center; */
+    justify-content: center;
     border-radius: 20px;
-    background-color: aquamarine;
+    /* border: 2px solid black; */
+    /* background:linear-gradient(130deg, #131212,hwb(186 50% 16%)); */
+
+}
+.navbar{
+    position: relative;
+    /* left: 200px; */
+    width: 100%;
+    border-radius: 20px;
+    background:linear-gradient(130deg, #4da3e1,hwb(186 50% 16%));
     height: 100px;
+}
+.navbar h1{
+    margin-top: 20px;
+
+text-align: center;
+line-height: 100px;
+/* font-weight: bolder; */
+font-size: 500%;
+color: white;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.totalIncome h1{
+    position: absolute;
+    left: 790px;
+    top: 175px;
+    text-align: end;
+}
+
+.form-group select option{
+    background-color: #4da3e1;
+}
+.investmentgroup{
+    display: flex;
+    justify-content: center;
+    place-content: space-evenly;
+}
+.buttonadd{
+    display: flex;
+float: inline-end;
 }

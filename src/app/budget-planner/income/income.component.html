@@ -1,9 +1,68 @@
-<!-- <div class="navbar">
+<div class="maincontainer">
+    <div class="navbar">
+        <h1>INCOME</h1>
+    </div>
+    <h1 style="margin-top: 20px">INCOME</h1>
+    <form [formGroup]="incomeForm" (ngSubmit)="onsubmit()" class="input-form">
+        <div class="form-group">
+            <select formControlName="month" id="month" class="form-controlname" (change)="onchange($event)" [value]="">
+                <option value="" disabled>select month</option>
+                <option value="January">january</option>
+                <option value="February">february</option>
+                <option value="March">march</option>
+            </select>
+        </div>
+        <div class="form-group"></div>
+        <div class="totalIncome">
+            <h1 class="total_incomeh1">
+                total income is {{ selectmonth }}:$
+                {{ calculateTotalIncome(selectmonth) }}
+            </h1>
+        </div>
+        <br>
+        <hr>
+<div class="investmentgroup">
+        <div class="form-group">
+            <h1>Investment</h1>
+            <select>
+                <option>401</option>
+                <option>402</option>
 
-</div> -->
+                <option>403</option>
 
-<form #form1="ngForm" class="templ" (ngSubmit)="onsubmit(form1)">
-<input type="text" placeholder="user" name="user" ngModel>
-<input type="password" placeholder="pass" name="pass" ngModel>
-<button type="submit">submit</button>
-</form>
+                <option>40</option>
+
+            </select>
+        </div>
+
+        <div class="form-group">
+            <h1>sorce of income</h1>
+            <select>
+                <option>401</option>
+                <option>402</option>
+
+                <option>403</option>
+
+                <option>40</option>
+
+            </select>
+        </div>
+        <div class="form-group">
+            <h1>Amount</h1>
+            <select>
+                <option>401</option>
+                <option>402</option>
+
+                <option>403</option>
+
+                <option>40</option>
+
+            </select>
+        </div>
+    </div>
+    <button mat-raised-button class="buttonadd" style="background-color: rgb(184, 217, 228)">Add</button>
+    <hr>
+    </form>
+
+    <button mat-raised-button (click)="back_toDashbord()" style="background-color: rgb(243, 200, 165)" >back</button>
+</div>

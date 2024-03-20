@@ -6,11 +6,14 @@
 <div class="login_container">
   <form *ngIf="activeForm === 'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()">
     <label for="loginUsername">Name</label>
-    <input type="text" placeholder="Username" id="loginUsername" formControlName="username" /><br /><br />
-
+     <mat-form-field class="example-full-width">
+      <input matInput placeholder="Username" value="" id="loginUsername" formControlName="username">
+    </mat-form-field>
     <label for="loginPassword">Password</label>
-    <input type="password" placeholder="Password" id="loginPassword" formControlName="password" /><br /><br />
 
+    <mat-form-field class="example-full-width">
+      <input matInput type="password" placeholder="Password" id="loginPassword" formControlName="password" /><br /><br />
+    </mat-form-field>
     <button mat-raised-button color="accent"
     type="submit">Login</button>
     <p (click)="toggle('register')">
@@ -26,9 +29,13 @@
     <input type="text" placeholder="Username" id="registerUsername" formControlName="username" /><br /><br />
 
     <label for="registerEmail">Email</label>
+
+   
+
     <input type="email" placeholder="Email" id="registerEmail" formControlName="email" /><br /><br />
 
     <label for="registerPassword">Password</label>
+
     <input type="password" placeholder="Password" id="registerPassword" formControlName="password" /><br /><br />
 
     <button mat-raised-button type="submit">Register</button>
