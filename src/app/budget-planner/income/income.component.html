@@ -1,68 +1,103 @@
 <div class="maincontainer">
-    <div class="navbar">
-        <h1>INCOME</h1>
+  <div class="navbar">
+    <h1>INCOME</h1>
+  </div>
+  <h1 style="margin-top: 20px">INCOME</h1>
+  <form [formGroup]="incomeForm" (ngSubmit)="onsubmit()" class="input-form">
+    <div class="form-group">
+      <mat-form-field>
+        <mat-label>Choose an Investment</mat-label>
+        <mat-select
+          formControlName="month"
+          id="month"
+          class="form-controlname"
+          (change)="onchange($event)"
+          [value]=""
+          (valueChange)="onchange($event)"
+        >
+          <mat-option value="" disabled>{{ selectmonth }}</mat-option>
+
+          <mat-option value="January">january</mat-option>
+          <mat-option value="February">February</mat-option>
+          <mat-option value="March">March</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-    <h1 style="margin-top: 20px">INCOME</h1>
-    <form [formGroup]="incomeForm" (ngSubmit)="onsubmit()" class="input-form">
-        <div class="form-group">
-            <select formControlName="month" id="month" class="form-controlname" (change)="onchange($event)" [value]="">
-                <option value="" disabled>select month</option>
-                <option value="January">january</option>
-                <option value="February">february</option>
-                <option value="March">march</option>
-            </select>
-        </div>
-        <div class="form-group"></div>
-        <div class="totalIncome">
-            <h1 class="total_incomeh1">
-                total income is {{ selectmonth }}:$
-                {{ calculateTotalIncome(selectmonth) }}
-            </h1>
-        </div>
-        <br>
-        <hr>
-<div class="investmentgroup">
-        <div class="form-group">
-            <h1>Investment</h1>
-            <select>
-                <option>401</option>
-                <option>402</option>
-
-                <option>403</option>
-
-                <option>40</option>
-
-            </select>
-        </div>
-
-        <div class="form-group">
-            <h1>sorce of income</h1>
-            <select>
-                <option>401</option>
-                <option>402</option>
-
-                <option>403</option>
-
-                <option>40</option>
-
-            </select>
-        </div>
-        <div class="form-group">
-            <h1>Amount</h1>
-            <select>
-                <option>401</option>
-                <option>402</option>
-
-                <option>403</option>
-
-                <option>40</option>
-
-            </select>
-        </div>
+    <div class="form-group"></div>
+    <div class="totalIncome">
+      <h1 class="total_incomeh1">
+        Total Income in {{ selectmonth }}:
+        {{ calculateTotalIncome(selectmonth) }}
+      </h1>
     </div>
-    <button mat-raised-button class="buttonadd" style="background-color: rgb(184, 217, 228)">Add</button>
-    <hr>
-    </form>
+    <br />
+    <hr />
+    <div class="investmentgroup">
+      <div class="form-group">
+        <h1>Investment</h1>
+        <mat-form-field>
+          <mat-label>Choose an Investment</mat-label>
+          <mat-select formControlName="investments"
+          >
+            <mat-option value="401">401</mat-option>
+            <mat-option value="Stocks">Stocks</mat-option>
+            <mat-option value="real estate">real estate</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
 
-    <button mat-raised-button (click)="back_toDashbord()" style="background-color: rgb(243, 200, 165)" >back</button>
+      <div class="form-group">
+        <h1>Source of income:</h1>
+
+        <mat-form-field>
+          <mat-label>Select source</mat-label>
+          <mat-select  formControlName="source">
+            <mat-option value="salery">salery</mat-option>
+            <mat-option value="freelancing">freelancing</mat-option>
+            <mat-option value="rental Income">rental Income</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <h1>Amount</h1>
+        <mat-form-field>
+          <mat-label>Enter Amount</mat-label>
+          <input  formControlName="amount" matInput type="number" />
+        </mat-form-field>
+      </div>
+    </div>
+    <button
+      type="submit"
+      mat-raised-button
+      class="buttonadd"
+      style="background-color: rgb(184, 217, 228)"
+    >
+      Add
+    </button>
+  </form>
+  <hr />
+  <table border="1">
+    <thead>
+      <th>source of Income</th>
+      <th>Amount</th>
+
+      <th>Investment</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let income of getFilterdIncome()">
+        <td>{{ income.source }}</td>
+        <td>{{ income.amount }}</td>
+
+        <td>{{ income.investments }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button
+    mat-raised-button
+    (click)="back_toDashbord()"
+    style="background-color: rgb(243, 200, 165)"
+  >
+    back
+  </button>
 </div>

@@ -12,13 +12,16 @@ import { IncomeComponent } from './income/income.component';
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
     LoginComponent,SideNavComponent, DashbordComponent, IncomeComponent
   ],
-  imports: [FormsModule,MatSlideToggleModule,MatInputModule,
-    CommonModule,ReactiveFormsModule,MatSnackBarModule,
+  imports: [FormsModule,MatSlideToggleModule,MatInputModule,MatFormFieldModule,
+    CommonModule,ReactiveFormsModule,MatSnackBarModule,MatSelectModule,MatCheckboxModule,
     BudgetPlannerRoutingModule,MatButtonModule,MatIconModule
   ]
 })

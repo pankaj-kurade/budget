@@ -5,15 +5,15 @@ import { LoginComponent } from './login/login.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { IncomeComponent } from './income/income.component';
-
+import { AuthguardService } from './authguard.service';
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent},
   {
     path: 'side-nav',
     component: SideNavComponent,
   },
   {path:'dashbord',component:DashbordComponent},
-  { path:'income',component:IncomeComponent}
+  { path:'income',component:IncomeComponent }
 ];
 
 @NgModule({
