@@ -5,7 +5,8 @@ const routes: Routes = [
 
   {
     path:'budget-planner',loadChildren:()=> import('./budget-planner/budget-planner.module').then(mode=>mode.BudgetPlannerModule)
-  }
+  },
+  {path:'admin',loadChildren:()=> import('./app.module').then(mod=>mod.AppModule)}
 ];
 
 @NgModule({

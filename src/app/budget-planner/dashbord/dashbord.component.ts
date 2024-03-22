@@ -17,10 +17,10 @@ export class DashbordComponent {
 
 
 onTodo() {
-throw new Error('Method not implemented.');
+  this.router.navigate(['./budget-planner/income'])
 }
 onExpance() {
-throw new Error('Method not implemented.');
+this.router.navigate(['./budget-planner/income'])
 }
 onIncome() {
   this.router.navigate(['./budget-planner/income']);

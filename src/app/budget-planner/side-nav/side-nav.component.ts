@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrl: './side-nav.component.css'
 })
 export class SideNavComponent {
+  arrtran=[1,2,3,4]
   constructor(private router:Router){}
 logout() {
 this.router.navigate(['./budget-planner/login']);

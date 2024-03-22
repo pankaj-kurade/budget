@@ -46,8 +46,17 @@
   place-content: space-evenly;
 }
 .buttonadd {
-    background-color: rgb(243, 200, 165); float: right;
+    background-color: rgb(243, 200, 165); 
+    float: right;
 }
 .form-controlname_month{
     background-color: #4da3e1;
+}
+table{  margin: 12px;
+  border: 2px solid #101112;
+  box-shadow:  02px 0 10px #4da3e1;
+  /* background-color: linear-gradient(130deg, #4da3e1, hwb(186 50% 16%)); */
+  border-radius: 10px; 
+  width: 100%;
+  text-align: center;
 }

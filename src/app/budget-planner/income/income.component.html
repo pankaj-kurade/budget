@@ -7,14 +7,8 @@
     <div class="form-group">
       <mat-form-field>
         <mat-label>Choose an Investment</mat-label>
-        <mat-select
-          formControlName="month"
-          id="month"
-          class="form-controlname"
-          (change)="onchange($event)"
-          [value]=""
-          (valueChange)="onchange($event)"
-        >
+        <mat-select formControlName="month" id="month" class="form-controlname" (change)="onchange($event)" [value]=""
+          (valueChange)="onchange($event)">
           <mat-option value="" disabled>{{ selectmonth }}</mat-option>
 
           <mat-option value="January">january</mat-option>
@@ -37,8 +31,7 @@
         <h1>Investment</h1>
         <mat-form-field>
           <mat-label>Choose an Investment</mat-label>
-          <mat-select formControlName="investments"
-          >
+          <mat-select formControlName="investments">
             <mat-option value="401">401</mat-option>
             <mat-option value="Stocks">Stocks</mat-option>
             <mat-option value="real estate">real estate</mat-option>
@@ -51,10 +44,10 @@
 
         <mat-form-field>
           <mat-label>Select source</mat-label>
-          <mat-select  formControlName="source">
-            <mat-option value="salery">salery</mat-option>
-            <mat-option value="freelancing">freelancing</mat-option>
-            <mat-option value="rental Income">rental Income</mat-option>
+          <mat-select formControlName="source">
+            <mat-option value="Salery">salery</mat-option>
+            <mat-option value="Freelancing">freelancing</mat-option>
+            <mat-option value="Rental Income">rental Income</mat-option>
           </mat-select>
         </mat-form-field>
       </div>
@@ -62,21 +55,15 @@
         <h1>Amount</h1>
         <mat-form-field>
           <mat-label>Enter Amount</mat-label>
-          <input  formControlName="amount" matInput type="number" />
+          <input formControlName="amount" matInput type="number" />
         </mat-form-field>
       </div>
     </div>
-    <button
-      type="submit"
-      mat-raised-button
-      class="buttonadd"
-      style="background-color: rgb(184, 217, 228)"
-    >
-      Add
-    </button>
+    <button type="submit" mat-flat-button class="buttonadd" 
+    style="background-color: rgb(184, 217, 228)">Add </button>
   </form>
-  <hr />
-  <table border="1">
+  <!-- <hr> -->
+  <table>
     <thead>
       <th>source of Income</th>
       <th>Amount</th>
@@ -93,11 +80,12 @@
     </tbody>
   </table>
 
-  <button
-    mat-raised-button
-    (click)="back_toDashbord()"
-    style="background-color: rgb(243, 200, 165)"
-  >
+  <button mat-raised-button (click)="back_toDashbord()" style="background-color: rgb(243, 200, 165)">
     back
   </button>
+  <button mat-raised-button (click)="back_toDashbord()" style="float: right; "(click)="saveinfo()">
+    save
+  </button>
 </div>
+
+<!-- <h1 [ngStyle]="{'background-color':back}">vdsv</h1> -->

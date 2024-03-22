@@ -2,11 +2,9 @@
   /* position: absolute;
 top: 2px;    */
 }
-
 .card-container {
   position: absolute;
   top: 60px;
-
   display: flex;
   flex-wrap: wrap;
   left: 300px;
