@@ -1,9 +1,9 @@
+import { exit } from 'process';
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 // import {MatInputModule} from '@angular/material/input';
-
 
 @Component({
   selector: 'app-login',
@@ -21,6 +21,18 @@ export class LoginComponent {
     private router: Router
   ) {}
 
+  registeredData = [
+    {
+      email: 'pankajkurade085@gmail.com',
+      password: 'Kurade',
+      username: 'Pankaj',
+    },
+    {
+      email: 'pankajkurade085@gmail.com',
+      password: 'Kurade',
+      username: 'suraj',
+    },
+  ];
   ngOnInit() {
     this.loginForm = this.fb.group({
       password: ['', Validators.required],
@@ -40,27 +52,45 @@ export class LoginComponent {
 
   onLogin() {
     const formData = this.loginForm.value;
-    if (this.loginForm.valid && formData.password==='Kurade' && formData.username==='Pankaj' ) {
-      this.router.navigate(['./budget-planner/dashbord']);
-      localStorage.setItem('username', formData.username);
-      localStorage.setItem('password', formData.password);
+    if (this.loginForm.valid) {
 
-      console.log('Login Form Data:', formData);
-    
-    } else {
-      console.log('Invalid Login Form Data:', this.loginForm.value);
-      this.snackBar.open('Please fill the form correctly', 'Close', {
-        duration: 3000,
-      });
+      if (formData.password === 'Kurade' && formData.username === 'Pankaj') {
+        this.router.navigate(['./budget-planner/dashbord']);
+        localStorage.setItem('username', formData.username);
+        localStorage.setItem('password', formData.password);
+
+        console.log('Login Form Data:', formData);
+      } else {
+        console.log('Invalid Login Form Data:', this.loginForm.value);
+        this.snackBar.open('Please fill the form correctly', 'Close', {
+          duration: 3000,
+        });
+      }
     }
   }
 
+
   onRegister() {
     if (this.registerForm.valid) {
-      const formData = this.registerForm.value;
-      console.log('Register Form Data:', formData);
-      // Redirect or do something with the form data
-      this.router.navigate(['./bdge']);
+      var checkusername = this.registerForm.value.username;
+
+      for (const key in this.registeredData) {
+        // console.log(this.registeredData[key].username);
+        if (this.registeredData[key].username === checkusername) {
+          this.snackBar.open('username is already exites', 'Close', {
+            duration: 3000,
+          });
+        } else {
+          console.log(this.registeredData, 'before');
+
+          var newregister_form = this.registerForm.value;
+          this.registeredData.push(newregister_form);
+          console.log(this.registeredData, 'after');
+        }
+        break;
+      }
+      // const formData = this.registerForm.value;
+      // console.log('Register Form Data:', formData);
     } else {
       console.log('Invalid Register Form Data:', this.registerForm.value);
       this.snackBar.open('Please fill the form correctly', 'Close', {
@@ -69,7 +99,6 @@ export class LoginComponent {
     }
   }
   ngOnDestroy() {
-
-console.log("distory")
+    console.log('distory');
   }
 }

@@ -14,5 +14,4 @@ this.router.navigate(['./budget-planner/login'])
   }
 }
 
-git config --global user.email "pankajkurade316@gmail.com.com"
-git config --global user.name "Pankaj"
+// git config --global user.email "pan
