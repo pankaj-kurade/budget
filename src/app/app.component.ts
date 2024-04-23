@@ -14,4 +14,3 @@ this.router.navigate(['./budget-planner/login'])
   }
 }
 
-// git config --global user.email "pan

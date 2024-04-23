@@ -1,46 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: #34747b;
-}
-h1{
-    text-align: center;
-    line-height: 50px;
-font-family: Arial, Helvetica, sans-serif;}
-.navbar_login{
-    height: 50px;
-    background:linear-gradient(130deg, #808080,hwb(186 50% 16%));
-    width: 100%;
-    border-radius: 20px;
+* {
+  margin: 0;
+  padding: 0;
+  /* background-image:url("https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713830400&semt=ais"); */
+
+  /* https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713830400&semt=ais */
 }
 
-.login_container{
-    border-color: 2px solid black;
-    max-height: 400px;
-    background-color:#80808071;
-    border-radius: 5%;
-    margin: 100px auto 50px auto;
-    padding: 40px;
-    /* box-shadow: 0 0 20px #b5cee4; */
-    box-shadow: 0px 0px 30px rgb(160, 164, 163);
 
-    width: 30%;
+h1 {
+  text-align: center;
+  line-height: 50px;
+  font-family: Arial, Helvetica, sans-serif;
 }
-s
-.login_container:hover{
-    box-shadow: 0px 0px 30px rgb(189, 228, 228);
+
+.navbar_login {
+  height: 50px;
+
+  background: linear-gradient(130deg, #808080, hwb(186 50% 16%));
+  width: 100%;
+  border-radius: 20px;
+}
+
+.login_container {
+  background-image:url("https://e0.pxfuel.com/wallpapers/667/98/desktop-wallpaper-login-background-outlook-login.jpg");
+
+  border-color: 2px solid black;
+  max-height: 400px;
+  background-color: #80808071;
+  border-radius: 5%;
+  margin: 100px auto 50px auto;
+  padding: 40px;
+  /* box-shadow: 0 0 20px #b5cee4; */
+  box-shadow: 0px 0px 30px rgb(160, 164, 163);
+
+  width: 30%;
+}
+
+.login_container:hover {
+  box-shadow: 0px 0px 30px rgb(189, 228, 228);
 }
 
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
-  }
-  
-  .example-full-width {
-    width: 100%;
-    height: auto;
-  }
-  
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  height: auto;
+}

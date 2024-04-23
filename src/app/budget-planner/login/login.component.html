@@ -6,16 +6,16 @@
 <div class="login_container">
   <form *ngIf="activeForm === 'login'" [formGroup]="loginForm" (ngSubmit)="onLogin()">
     <label for="loginUsername">Name</label>
-     <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width">
       <input matInput placeholder="Username" value="" id="loginUsername" formControlName="username">
     </mat-form-field>
     <label for="loginPassword">Password</label>
 
     <mat-form-field class="example-full-width">
-      <input matInput type="password" placeholder="Password" id="loginPassword" formControlName="password" /><br /><br />
+      <input matInput type="password" placeholder="Password" id="loginPassword"
+        formControlName="password" /><br /><br />
     </mat-form-field>
-    <button mat-raised-button color="accent"
-    type="submit">Login</button>
+    <button mat-raised-button color="accent" type="submit">Login</button>
     <p (click)="toggle('register')">
       Don't have an account?
       <span class="highlight" style="color: coral">Register</span>
@@ -30,7 +30,7 @@
 
     <label for="registerEmail">Email</label>
 
-   
+
 
     <input type="email" placeholder="Email" id="registerEmail" formControlName="email" /><br /><br />
 

@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-image:url("https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713830400&semt=ais");
+background-size: cover;
+  /* https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1713830400&semt=ais */
+}
+
+.main-container{
+  height: 100vh;
+}
