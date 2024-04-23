@@ -28,7 +28,7 @@ export class LoginComponent {
       username: 'Pankaj',
     },
     {
-      email: 'pankajkurade085@gmail.com',
+      email: 'pankajkura@gmail.com',
       password: 'Kurade',
       username: 'suraj',
     },
@@ -50,22 +50,27 @@ export class LoginComponent {
     this.activeForm = form;
   }
 
+
   onLogin() {
     const formData = this.loginForm.value;
     if (this.loginForm.valid) {
+      let checkUserPass=this.loginForm.value.username;
+      console.log(checkUserPass,'checkpass');
+      for (const key in this.registeredData) {
+        if (this.registeredData[key].username===checkUserPass) {
+          this.router.navigate(['./budget-planner/dashbord']);
+          localStorage.setItem('username', formData.username);
+          localStorage.setItem('password', formData.password);
+        }
+        else {
+          console.log('Invalid Login Form Data:') ;
+          this.snackBar.open('Please fill the form correctly', 'Close', {
+            duration: 3000,
+          });
+        }
 
-      if (formData.password === 'Kurade' && formData.username === 'Pankaj') {
-        this.router.navigate(['./budget-planner/dashbord']);
-        localStorage.setItem('username', formData.username);
-        localStorage.setItem('password', formData.password);
-
-        console.log('Login Form Data:', formData);
-      } else {
-        console.log('Invalid Login Form Data:', this.loginForm.value);
-        this.snackBar.open('Please fill the form correctly', 'Close', {
-          duration: 3000,
-        });
       }
+
     }
   }
 
@@ -86,7 +91,9 @@ export class LoginComponent {
           var newregister_form = this.registerForm.value;
           this.registeredData.push(newregister_form);
           console.log(this.registeredData, 'after');
+          break;
         }
+        this.router.navigate(['./budget-planner/dashbord']);
         break;
       }
       // const formData = this.registerForm.value;
@@ -98,7 +105,5 @@ export class LoginComponent {
       });
     }
   }
-  ngOnDestroy() {
-    console.log('distory');
-  }
+
 }
